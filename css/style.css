@@ -62,14 +62,12 @@ body {
 }
 .btn_1 {
     margin-top: 30px;
-    margin-left: 50px;
 }
 .btn_1:hover {
     box-shadow: 0 5px 15px 5px rgba(0,0,0,0.5);
 }
 .btn_2 {
     margin-top: 30px;
-    margin-left: 50%;
     padding: 0;
 }
 .btn_2:hover {
