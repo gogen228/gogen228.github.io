@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Калькулятор</title>
+    <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,117 +19,112 @@
     <![endif]-->
   </head>
   <body>
-    <section id="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="calc">
-                        <h2>Расчет Удачной Стрелки</h2>
-                        <label for="name_baby">Выбери фильм</label><br>
-                        <select class="form-control" name="film" id="title_film">
-                            <option data-film="1" value="Будет задавать много вопросов">Бегущий По Лезвию</option>
-                            <option data-film="2" value="Не поймёт">Матрица</option>
-                            <option data-film="3" value="Пустит слезу и не поймет">Фонтан</option>
-                            <option data-film="4" value="Скорее всего будет прятаться в твоих сиськах">Спасти Рядового Райана</option>
-                            <option data-film="5" value="Это го*но смотри только с Борей">Звездные Войны VIII</option>
-                        </select>
-                    <br>
-                    <label for="name_baby">Выбери Тёлочку</label>
-                    <select name="baby" id="name_baby" class="form-control">
-                        <option data-name="1" value="">Лена</option>
-                        <option data-name="2" value="">Вера</option>
-                        <option data-name="3" value="">Таня</option>
-                        <option data-name="4" value="">Оля</option>
-                        <option data-name="5" value="PIDR DETECTED">Боря</option>
-                    </select>
-                    <br>
-                    <label for="dude">Юрий будет дуть?</label>
-                    <select name="Yura" id="dude" class="form-control">
-                        <option value="">Да</option>
-                        <option value="">Нет</option>
-                    </select>
-                    <br>
-                    <h4>Вердикт:</h4>
-                    <span id="total"></span>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="film-imgs text-center">
-                        <img src="img/1.png" alt="" id="imgs_1">
-                        <img src="img/2.jpg" alt="" id="imgs_2">
-                        <img src="img/3.jpg" alt="" id="imgs_3">
-                        <img src="img/4.jpg" alt="" id="imgs_4">
-                        <img src="img/detective1.jpg" alt="" id="imgs_5">
-                    </div>
-                </div>
-                 <div class="col-md-4">
-                    <div class="baby-imgs text-center">
-                        <img src="img/Лена.jpg" alt="" id="photo_1">
-                        <img src="img/Вера.jpg" alt="" id="photo_2">
-                        <img src="img/Таня.jpg" alt="" id="photo_3">
-                        <img src="img/Оля.jpeg" alt="" id="photo_4">
-                        <img src="img/detective2.jpg" alt="" id="photo_5">
-                    </div>
-                </div>
+    <!-- Button trigger modal -->
+<button class="btn btn-primary btn_1" data-toggle="modal" data-target="#myModal">
+        Авторизоваться
+      </button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Форма авторизации</h4>
+      </div>
+      <div class="modal-body">
+         <form class="tab-contents" action="ty.html">
+                
+                    <input class="form-1" id="name" type="text" name="name" value="" minlength="2" placeholder="Имя или никнейм">
+                    <input class="form-2" id="email" type="email" name="email" value="" minlength="7" placeholder="Email">
+                    <input class="form-3" id="password" type="password" name="password" value="" minlength="7" placeholder="Пароль">
+                
+                <button type="submit" class="btn btn_1 btn-primary">Вход</button>
+            </form>
+      </div>
+      <div class="modal-footer">
+        <div class="login">
+                <p>Ещё нет аккаунта?</p>
+                <a href="#">Зарегистрировать</a>
             </div>
-        </div>
-    </section>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        
+      </div>
+    </div>
+  </div>
+</div> 
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn_2" data-toggle="modal" data-target="#myModal1">
+        <img src="img/ВСВ.jpg" alt="">
+      </button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Читайте на здоровье</h4>
+      </div>
+      <div class="modal-body">
+        <pre>
+            Владимир Высоцкий - 'Купола'
+
+
+            Как засмотрится мне нынче, как задышится, 
+            Воздух крут перед грозой, крут да вязок, 
+            Что споётся мне сегодня, что услышится, 
+            Птицы вещие поют да все из сказок. 
+            
+            Птица Сирин мне радостно скалится, 
+            Веселит, зазывает из гнёзд, 
+            А напротив тоскует печалится, 
+            Травит душу чудной Алконост. 
+            
+            Словно семь заветных струн 
+            Зазвенели в свой черёд, 
+            То мне птица Гамаюн 
+            Надежду подаёт. 
+            
+            В синем небе, колокольнями проколотом, 
+            Медный колокол, медный колокол 
+            То ль возрадовался, то ли осерчал. 
+            Купола в России кроют чистым золотом, 
+            Чтобы чаще Господь замечал. 
+            
+            Я стою, как перед вечною загадкою, 
+            Пред великою да сказочной страною, 
+            Перед солоно да горько, кисло-сладкою, 
+            Голубою, родниковою, ржаною. 
+            
+            Грязью чавкая, жирной да ржавою, 
+            Вязнут лошади по стремена, 
+            Но влекут меня сонной державою, 
+            Что раскисла, опухла от сна. 
+            
+            Словно семь заветных лун 
+            На пути моем встаёт, 
+            То мне птица Гамаюн 
+            Надежду подаёт. 
+            
+            Душу, сбитую утратами да тратами, 
+            Душу, стёртую перекатами, 
+            Если до крови лоскут истончал, 
+            Залатаю золотыми я заплатами, 
+            Чтобы чаще Господь замечал.</pre>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.calc select').change(function(){
-                $film = $('select#title_film').val();
-                $baby = $('select#name_baby').val();
-                $film_format = $('select#title_film option:selected').attr('data-film');
-                $name_baby = $('select#name_baby option:selected').attr('data-name');
-                $total = $('#title_film').val();
-                $('span#total').html($total);
-                if ($film_format == 1) {
-                    $('.film-imgs img').hide();
-                    $('#imgs_1').show(200);
-                }
-                if ($film_format == 2) {
-                    $('.film-imgs img').hide();
-                    $('#imgs_2').show(200);
-                }
-                if ($film_format == 3) {
-                    $('.film-imgs img').hide();
-                    $('#imgs_3').show(200);
-                }
-                if ($film_format == 4) {
-                    $('.film-imgs img').hide();
-                    $('#imgs_4').show(200);
-                }
-                if ($film_format == 5) {
-                    $('.film-imgs img').hide();
-                    $('#imgs_5').show(200);
-                }
-                 if ($name_baby == 1) {
-                    $('.baby-imgs img').hide();
-                    $('#photo_1').show(200);
-                }
-                if ($name_baby == 2) {
-                    $('.baby-imgs img').hide();
-                    $('#photo_2').show(200);
-                }
-                if ($name_baby == 3) {
-                    $('.baby-imgs img').hide();
-                    $('#photo_3').show(200);
-                }
-                if ($name_baby == 4) {
-                    $('.baby-imgs img').hide();
-                    $('#photo_4').show(200);
-                }
-                if ($name_baby == 5) {
-                    $('.baby-imgs img').hide();
-                    $('#photo_5').show(200);
-                }
-           })
-        });
-    </script>
+    <script src="jquery/jquery.validate.min.js"></script>
   </body>
 </html>
