@@ -1,118 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Parallax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
     <!-- Bootstrap -->
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,700" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/animate.css">
+   
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/style.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-</head>
-
-<body>
-    <!--<div class="rellax">
-  I’m that default chill speed of "-2"
-</div>
-<div class="rellax" data-rellax-speed="7">
-  I’m super fast!!
-</div>
-<div class="rellax" data-rellax-speed="-4">
-  I’m extra slow and smooth
-</div> -->
-    <header class="header">
-        <div class="container">
-            <div class="header-logo">
-                <img src="img/logo.png" alt="logo">
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="header-caption">
-                        <h1>Great experiences build <br> great brands.</h1>
+  </head>
+  <body>
+    <footer class="footer">
+    	<div id="map"></div>
+    	<div class="container">
+    		<div class="flex-form">
+    			<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
+    		<div class="header-form">
+                        <h2>Contact</h2>
+                        <form class="header-form__help" action="#" method="post">
+                            <span></span>
+                            <input type="text" name="email" value="" placeholder="Your Email">
+                            <input class="form_1" type="text" name="company" value="" placeholder="Company">
+                            <input class="form_2" type="text" name="subject" value="" placeholder="Subject">
+                            <span></span>
+                            <textarea name="message" placeholder="Your Messages"></textarea>
+                            <button class="header-form__btn" type="submit">Send Message</button>
+                        </form>
                     </div>
-                </div>
-            </div>
-            <div class="header-nav">
-                <nav class="main-navigation text-center">
-                    <li class="wow fadeInLeftBig" data-wow-delay="0.5s"><a href="#">Home</a></li>
-                    <li class="wow fadeInLeftBig" data-wow-delay="0.8s"><a href="#">About us</a></li>
-                    <li class="wow fadeInLeftBig" data-wow-delay="1.0s"><a href="#">What we do</a></li>
-                    <li class="wow fadeInLeftBig" data-wow-delay="1.2s"><a href="price.html">Meet the team</a></li>
-                    <li class="wow fadeInLeftBig" data-wow-delay="1.2s"><a href="price.html">Our work</a></li>
-                    <li class="wow fadeInLeftBig" data-wow-delay="1.2s"><a href="price.html">Get in touch</a></li>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <section class="main">
-        <div class="main_1 text-center">
-            <h3>
-                Digital creative
-            </h3>
-            <p>We quickly bring ideas to life with tangible
-                <br> prototypes, and refine until the very last
-                <br> moment in close collaboration with our
-                <br> clients.
-            </p>
-        </div>
-        <div class="main_text">
-            <img src="img/our ideology.png" alt="">
-        </div>
-        <div class="main_2">
-            <div class="rellax" data-rellax-speed="3">
-                <div class="main_2-1">
-                </div>
-            </div>
-            <div class="main_2-2">
-                <img src="img/Ideas are easy to come by. Execution is really, really hard..png"  alt="">
-            </div>
-        </div>
-        <div class="rellax" data-rellax-speed="4">
-            <div class="main_3">
-                <img src="img/Ellipse_1.png" alt="">
-            </div>
-        </div>
-        <div class="rellax" data-rellax-speed="1">
-            <div class="main_4">
-                <img src="img/Ellipse_2.png" alt="">
-            </div>
-        </div>
-        <div class="rellax" data-rellax-speed="5">
-            <div class="main_5">
-                <img src="img/+++.png" alt="">
-            </div>
-        </div>
-        <div class="rellax" data-rellax-speed="5">
-            <div class="main_6">
-                <img src="img/pluse.png" alt="">
-            </div>
-        </div>
-    </section>
-    <div class="container">
-        <section class="box">
-            <img src="img/footer.png" alt="">
-        </section>
-    </div>
+    	</div>
+    	
+    	</div>
+    	
+    </footer>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/rellax.min.js"></script>
-    <script>
-    var rellax = new Rellax('.rellax', {
-        center: true
-    });
+    <script type="text/javascript">
+  ymaps.ready(init);
+    var myMap,
+        myPlacemark;
 
-    </script>
-</body>
+    function init(){     
+        myMap = new ymaps.Map("map", {
+            center: [42.123676, 47.840820],
+            zoom: 17
+        });
 
+        myPlacemark = new ymaps.Placemark([42.123676, 47.840820], { 
+            hintContent: 'Маджалис!', 
+            balloonContent: 'Местный родник' 
+        }, {// Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/img.jpg',
+            // Размеры метки.
+            iconImageSize: [80, 80],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-25, -78]
+        }),
+
+        myMap.geoObjects.add(myPlacemark);
+            
+    };
+</script>
+  </body>
 </html>
